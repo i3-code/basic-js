@@ -4,12 +4,12 @@ const chainMaker = {
   chain: [],
 
   getLength() {
-    let chainLength = this.chain.length();
+    let chainLength = this.chain.length;
     this.chain = [];
     return chainLength;
   },
 
-  addLink(value = ' ') {
+  addLink(value) {
     this.chain.push(value);
     return this;
   },
@@ -18,7 +18,6 @@ const chainMaker = {
     if(!position || isNaN(+position - 1) || position == '' || this.chain[position - 1] === undefined) {
       this.chain = [];
       throw new Error('Error');
-      return this;
     }
     this.chain.splice(position - 1, 1);
     return this;
@@ -33,7 +32,7 @@ const chainMaker = {
     let result = '';
     this.chain.map( (i) => { result += `( ${i} )~~`; });
     this.chain = [];
-    return result.substr(0, result.length - 2);
+    return result.slice(0, -2);
   }
 };
 

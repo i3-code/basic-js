@@ -15,6 +15,7 @@ module.exports = function repeater(str, options) {
   for (let i = 0; i < additionRepeatTimes - 1; i += 1) {
     addStr += addition + additionSeparator;
   }
+  
   if (additionRepeatTimes > 0) addStr += addition;
 
   for (let i = 0; i < repeatTimes - 1; i += 1) {
