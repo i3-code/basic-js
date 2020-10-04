@@ -30,7 +30,7 @@ const chainMaker = {
 
   finishChain() {
     let result = '';
-    this.chain.map( (i) => { result += `( ${i} )~~`; });
+    this.chain.map((i) => { result += `( ${i} )~~`; });
     this.chain = [];
     return result.slice(0, -2);
   }

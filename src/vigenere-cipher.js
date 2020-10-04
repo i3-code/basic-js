@@ -14,13 +14,13 @@ class VigenereCipheringMachine {
     let result = '';
     let position = 0;
 
-    for (let i=0; i < message.length; i++) {
+    for (let i=0; i < message.length; i += 1) {
       let charCode = message.charCodeAt(i);
       if (charCode >= 65 && charCode <= 91) {
         charCode -= 65;
-        let charCodeCrypted = key.charCodeAt(position) - 65;
-        let resultCharcode = ((charCode + charCodeCrypted) % 26) + 65;
-        result += String.fromCharCode(resultCharcode);
+        let charCodeEncrypted = key.charCodeAt(position) - 65;
+        let resultCharCode = ((charCode + charCodeEncrypted) % 26) + 65;
+        result += String.fromCharCode(resultCharCode);
         position++;
       } else {
         result += message[i];
@@ -44,9 +44,9 @@ class VigenereCipheringMachine {
       let charCode = encryptedMessage.charCodeAt(i);
       if (charCode >= 65 && charCode <= 91) {
         charCode -= 65;
-        let charCodeCrypted = key.charCodeAt(position) - 65;
-        let resultCharcode = ((charCode + 26 -  charCodeCrypted) % 26) + 65;
-        result += String.fromCharCode(resultCharcode);
+        let charCodeEncrypted = key.charCodeAt(position) - 65;
+        let resultCharCode = ((charCode + 26 -  charCodeEncrypted) % 26) + 65;
+        result += String.fromCharCode(resultCharCode);
         position++;
       } else {
         result += encryptedMessage[i];
