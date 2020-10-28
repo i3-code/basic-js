@@ -15,11 +15,11 @@ const chainMaker = {
   },
 
   removeLink(position) {
-    if(!position || isNaN(+position - 1) || position == '' || this.chain[position - 1] === undefined) {
-      this.chain = [];
-      throw new Error('Error');
-    }
-    this.chain.splice(position - 1, 1);
+	if (this.chain[position - 1] === undefined) {
+        this.chain = [];
+        throw new Error('Error');
+	}
+	this.chain.splice(position - 1, 1);
     return this;
   },
 
