@@ -197,13 +197,12 @@ NB! Имя члена команды может содержать **пробе�
 Например:
 
 `const depthCalc = new DepthCalculator();`
-`const { calculateDepth } = depthCalc;`
 
-`calculateDepth([1, 2, 3, 4, 5])` => `1`
+`depthCalc.calculateDepth([1, 2, 3, 4, 5])` => `1`
 
-`calculateDepth([1, 2, 3, [4, 5]])` => `2`
+`depthCalc.calculateDepth([1, 2, 3, [4, 5]])` => `2`
 
-`calculateDepth([[[]]])` => `3`
+`depthCalc.calculateDepth([[[]]])` => `3`
 
 Напишите ваш код в `src/recursive-depth.js`.
 
@@ -271,7 +270,7 @@ NB! Имя члена команды может содержать **пробе�
 ---
 
 #### Предварительные шаги
-1. Устаовите [Node.js](https://nodejs.org/en/download/)   
+1. Установите [Node.js](https://nodejs.org/en/download/)   
 2. Сделайте форк этого репозитория: https://github.com/AlreadyBored/basic-js
 3. Склонируйте себе этот репозиторий: https://github.com/<%your_github_username%>/basic-js/  
 4. Перейдите в папку `basic-js`  
